@@ -34,8 +34,8 @@ endif
 GO_VERSION ?= 1.4.1
 GOURL      ?= https://golang.org/dl
 GOPKG      ?= go$(GO_VERSION).$(GOOS)-$(GOARCH)$(RELEASE_SUFFIX).tar.gz
-GOROOT     := $(PWD)/.deps/go
-GOPATH     := $(PWD)/.deps/gopath
+GOROOT     := $(CURDIR)/.deps/go
+GOPATH     := $(CURDIR)/.deps/gopath
 GOCC       := $(GOROOT)/bin/go
 GO         := GOROOT=$(GOROOT) GOPATH=$(GOPATH) $(GOCC)
 GOFMT      := $(GOROOT)/bin/gofmt
