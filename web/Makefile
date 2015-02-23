@@ -18,6 +18,7 @@ all: blob/files.go
 SUFFIXES:
 
 blob/files.go: $(shell find templates/ static/ -type f)
+	echo $(MAKEFILE_DIR)
 	./blob/embed-static.sh static templates | $(GOFMT) > $@
 
 clean:
